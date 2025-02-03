@@ -1,9 +1,9 @@
 .background-titulo{
   background-color: #ecdf02;
-  padding: 10px;
+  padding: 30px 0;
   width: 100%;
   margin: 0 auto;
-  padding-left: 250px;
+ 
 }
 
 .titulo-about{
@@ -12,6 +12,8 @@
   text-align: start;
   font-size: 40px;
   font-weight: 700;
+  padding-left: 250px;
+  padding-top: 20px;
 }
 
 .background-about{
@@ -45,6 +47,9 @@
 
 .descricao{
   font-size: 20px;
+  text-align: justify;
+  line-height: 2rem;
+  padding-top: 20px;
 }
 
 .center{
@@ -60,8 +65,9 @@
   padding: 20px 50px;
   text-align: justify;
  justify-content: center;
+ line-height: 2rem;
 }
 
 .titulo-biografia{
-  margin: 5px 0px;
+  margin:10px 0px;
 }
