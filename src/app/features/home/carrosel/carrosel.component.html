@@ -1,0 +1,11 @@
+<div class="carousel">
+  <img [src]="images[currentImageIndex]" alt="Imagem do Carrossel" class="carousel-image" width="1900px" height="568px" />
+  <div class="carousel-indicators">
+    <span 
+      *ngFor="let image of images; let i = index" 
+      [class.active]="i === currentImageIndex"
+      (click)="goToImage(i)">
+    </span>
+  </div>
+</div>
+

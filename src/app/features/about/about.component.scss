@@ -1,0 +1,67 @@
+.background-titulo{
+  background-color: #ecdf02;
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 250px;
+}
+
+.titulo-about{
+  color: #3e4095;
+  display: block; 
+  text-align: start;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.background-about{
+ height: 50vh;
+  background: url('/assets/images/banner-home.jpg') no-repeat;
+  object-fit: contain;
+}
+.grid-banner{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.texto{
+  grid-column: 2 / 3;
+  padding: 50px 100px;
+}
+
+.font-16{
+  margin-bottom: 0px;
+  font-size: 28px;
+}
+
+.titulo{
+  margin-top: 0px;
+  color: #3e4095;
+  display: block; 
+  text-align: start;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.descricao{
+  font-size: 20px;
+}
+
+.center{
+ width: 100%;
+ box-sizing: border-box;
+ padding: 0 10px;
+ max-width: 1170px;
+ margin: 0 auto;
+}
+
+.biografia{
+  display: block;
+  padding: 20px 50px;
+  text-align: justify;
+ justify-content: center;
+}
+
+.titulo-biografia{
+  margin: 5px 0px;
+}

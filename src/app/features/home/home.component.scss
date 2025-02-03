@@ -1,0 +1,93 @@
+.banner-about{
+ height: 50vh;
+  background: url('/assets/images/banner-home.jpg') no-repeat;
+}
+.grid-banner{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.texto{
+  grid-column: 2 / 3;
+  padding: 40px 100px;
+}
+
+.flex-banner{
+  display: flex;
+  flex-direction: column;
+}
+
+.font-16{
+  font-size: 28px;
+  display: block;
+}
+
+.titulo{
+  color: #3e4095;
+  display: block; 
+  text-align: start;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.about-button a{
+  color: #ffffff;
+  background-color: #3e4095;
+  border-radius: 5px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 20px 0px;
+  text-align: center;
+  font-weight: 600;
+  max-width: 270px;
+  text-decoration: none;
+}
+
+.produtos-home{
+  margin: 0 auto;
+}
+
+.center{
+  text-align: center;
+}
+
+.linha{
+  display: flex;
+  gap: 5px;
+  justify-items: center;
+  align-items: center;
+}
+
+.produtos-home{
+  padding-top: 40px;
+}
+
+.categorias{
+  margin: 70px 0;
+}
+
+.corpo-categorias{
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.col-4{
+  flex-basis: 25%;
+  max-width: 200px;
+  padding: 10px;
+  margin-bottom: 50px;
+  padding-right: 50px;
+}
+
+.col-4 img{
+  width: 100%;
+}
+
+.col-4 a{
+  text-decoration: none;
+  text-align: center;
+}
