@@ -3,11 +3,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-body, html {
+html, body{
+  color: #111;
   width: 100%;
-  overflow-x: hidden;
+  max-width: 100%;
+  overflow-x:hidden;
+  margin: 0;
+  padding: 0;
 }
+
+ul{
+  padding: 0px;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
