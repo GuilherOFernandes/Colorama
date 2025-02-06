@@ -15,20 +15,18 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'products', component: ProductsComponent, children:[
-    { path: 'products/ferragens', component: FerragensComponent },
+    { path: 'ferragens', component: FerragensComponent },
     { path: 'acrilica', component: AcrilicaComponent },
     { path: 'solventes', component: SolventesComponent },
     { path: 'materiais-pintura', component: MateriaisPinturaComponent },
     { path: 'equipamentos-protecao', component: EquipamentosProtecaoComponent },
   ],
  },
- { path: '', redirectTo: '/products', pathMatch: 'full' }, // Rota padrão
- { path: '**', redirectTo: '/products' }, // Rota para evitar erros 404
  { path: 'orders', component: OrdersComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{enableTracing:true})],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
