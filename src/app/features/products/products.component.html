@@ -11,15 +11,45 @@
       <a class="link-categoria" routerLink="materiais-pinturas" routerLinkActive="active">Materiais de pintura</a>
       <a class="link-categoria" routerLink="equipamentos-protecao" routerLinkActive="active">Equipamentos de Proteção</a>
     </div>
-   
+
     <div class="produtos-flex">
       <div class="produto">
-        <a href="">
-          <img src="assets\images\004591fb67cf8816eb223c36a0cef2c4.jpg" alt="Solvente Aguarrás" width="200px" height="200px">
-          <h4>Aguarrás <br>Solvente</h4>
-          <span class="center">Saiba Mais</span>
-        </a>
+        <div>
+          <img src="assets/images/004591fb67cf8816eb223c36a0cef2c4.jpg" alt="Solvente Aguarrás" width="200px" height="200px" />
+          <h4>Aguarrás <br />Solvente</h4>
+          <button type="button" class="center" (click)="openModal(template)">
+            Saiba Mais
+          </button>
+          <ng-template #template>
+            <div class="modal-body">
+              <button class="close-btn" (click)="closeModal()">
+                ×
+              </button>
+              <div class="modal-content">
+                <img src="assets/images/004591fb67cf8816eb223c36a0cef2c4.jpg" alt="Aguarrás" class="modal-image" />
+                <div class="modal-details">
+                  <h3>Aguarrás</h3>
+                  <p>
+                    <strong>Indicação de uso:</strong>
+                  </p>
+                  <p>
+                    Indicado na diluição de esmaltes sintéticos longos em óleo,
+                    desengraxante e desengordurante.
+                  </p>
+                  <label for="size">Tamanho:</label>
+                  <select id="size">
+                    <option value="">----</option>
+                    <option value="5L">5L</option>
+                    <option value="10L">10L</option>
+                  </select>
+                  <button class="btn btn-primary">Solicitar Orçamento</button>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </div>
       </div>
+
       <div class="produto">
         <a href="">
           <img src="assets/images/tinta_esmalte_contra_ferrugem_preto_brilho_3_6l_suvinil_158273_1_86ac7cbda77f12415c70f96a2e45899a.webp" alt="Ferrugem Cor e Proteção" width="200px" height="200px">

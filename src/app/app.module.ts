@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule} from '@angular/router';
+import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { BsModalService, ModalModule } from 'ngx-bootstrap/modal';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +17,8 @@ import { MateriaisPinturaComponent } from './features/products/materiais-pintura
 import { EquipamentosProtecaoComponent } from './features/products/equipamentos-protecao/equipamentos-protecao.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductsComponent } from './features/products/products.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -28,14 +33,17 @@ import { ProductsComponent } from './features/products/products.component';
     EquipamentosProtecaoComponent,
   ],
   imports: [
+    ModalModule.forRoot(),
+    NgbTooltipModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     AppRoutingModule,
     HomeModule,
     NgbModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [BsModalService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
