@@ -89,10 +89,10 @@ gap: 10px;
 
 .center{
   display: inline-block;
-  text-align: justify;
+  text-align: center;
   color: #fff;
-  margin: 50px 20px;
-  padding: 0.8rem 2.5rem;
+  margin: 40px 20px;
+  padding: 0.5rem 2.5rem;
   background-color: #3e4095;
   border-radius: 8px;
   font-size: 16px;
@@ -133,6 +133,11 @@ gap: 10px;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.modal-header, 
+.modal-footer{
+  border: none !important;
 }
 
 .modal-content {

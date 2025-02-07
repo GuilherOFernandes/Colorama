@@ -17,36 +17,16 @@
         <div>
           <img src="assets/images/004591fb67cf8816eb223c36a0cef2c4.jpg" alt="Solvente Aguarrás" width="200px" height="200px" />
           <h4>Aguarrás <br />Solvente</h4>
-          <button type="button" class="center" (click)="openModal(template)">
+          <button type="button" class="center" (click)="openModalWithInterceptor(template)">
             Saiba Mais
           </button>
-          <ng-template #template>
-            <div class="modal-body">
-              <button class="close-btn" (click)="closeModal()">
-                ×
-              </button>
-              <div class="modal-content">
-                <img src="assets/images/004591fb67cf8816eb223c36a0cef2c4.jpg" alt="Aguarrás" class="modal-image" />
-                <div class="modal-details">
-                  <h3>Aguarrás</h3>
-                  <p>
-                    <strong>Indicação de uso:</strong>
-                  </p>
-                  <p>
-                    Indicado na diluição de esmaltes sintéticos longos em óleo,
-                    desengraxante e desengordurante.
-                  </p>
-                  <label for="size">Tamanho:</label>
-                  <select id="size">
-                    <option value="">----</option>
-                    <option value="5L">5L</option>
-                    <option value="10L">10L</option>
-                  </select>
-                  <button class="btn btn-primary">Solicitar Orçamento</button>
-                </div>
-              </div>
-            </div>
-          </ng-template>
+    <ng-template #template>
+      <div class="modal-body text-center">
+      <p>Do you really want to close?</p>
+      <button type="button" class="btn btn-default" (click)="confirm()" >Yes</button>
+      <button type="button" class="btn btn-primary" (click)="decline()" >No</button>
+    </div>
+    </ng-template>
         </div>
       </div>
 
@@ -124,3 +104,4 @@
   </div>
 </section>
 <router-outlet></router-outlet>
+
