@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AcrilicaComponent } from './acrilica.component';
+import { ModalComponent } from './modal.component';
 
-describe('AcrilicaComponent', () => {
-  let component: AcrilicaComponent;
-  let fixture: ComponentFixture<AcrilicaComponent>;
+describe('ModalComponent', () => {
+  let component: ModalComponent;
+  let fixture: ComponentFixture<ModalComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AcrilicaComponent]
+      declarations: [ModalComponent]
     });
-    fixture = TestBed.createComponent(AcrilicaComponent);
+    fixture = TestBed.createComponent(ModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

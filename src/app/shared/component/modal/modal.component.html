@@ -1,0 +1,19 @@
+<div class="modal-header">
+  <div class="info-modal">
+    <h4 class="modal-title pull-left">{{ title }}</h4>
+    <i [className]="iconTemplate" style="font-size: 1.1rem; color: #2f9e41"></i>
+  </div>
+  <button (click)="bsModalRef.hide()">
+    <i class="bi bi-x" style="font-size: 1.5rem"></i>
+  </button>
+</div>
+<div class="modal-body">
+  <img [src]="product?.image" [alt]="product?.name" class="modal-image">
+  <h3>{{product?.name}}</h3>
+  <p class="strong">Categoria: {{product?.category}}</p>
+  <p>{{product?.description}}</p>
+  <button class="btn btn-success mt-3" (click)="addToCart()">
+    Adicionar ao Carrinho 🛒
+  </button>
+  <ng-container *ngTemplateOutlet="formTemplate"></ng-container>
+</div>
