@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { CarroselComponent } from './carrosel/carrosel.component'; // Importe o CarroselComponent
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -9,7 +10,8 @@ import { CarroselComponent } from './carrosel/carrosel.component'; // Importe o 
     CarroselComponent // Declare os componentes do módulo Home
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     HomeComponent // Exporte o HomeComponent para ser usado em outros módulos

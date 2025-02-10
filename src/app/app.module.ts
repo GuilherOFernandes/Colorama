@@ -28,7 +28,6 @@ import { OrdersService } from './features/orders/orders.service';
   ],
   imports: [
     AppRoutingModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
     CommonModule,

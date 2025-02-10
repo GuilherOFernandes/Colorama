@@ -9,6 +9,7 @@
           <tr>
             <th>Produto</th>
             <th>Categoria</th>
+            <th>Preço</th>
             <th>Ações</th>
           </tr>
         </thead>
@@ -23,8 +24,9 @@
               </div>
             </td>
             <td>{{ product.category }}</td>
+            <td>{{ product.price }}</td>
             <td>
-              <button class="remove" (click)="removeFromCart(product)">
+              <button class="remove" (click)="removeFromCart(product.cartItemId)">
                 <i class="fas fa-xmark"></i>
               </button>
             </td>
@@ -36,12 +38,14 @@
       <div class="box">
         <header>Resumo da compra</header>
         <div class="info">
-          <div><span>Sub-total</span><span>R$ 418</span></div>
-          <div><span>Frete</span><span>Gratuito</span></div>
+          <div *ngFor="let product of cartProducts" class="summary-item">
+            <span>{{ product.name }}</span>
+            <span>{{ product.price }}</span>
+          </div>
         </div>
         <footer>
-          <span>Total</span>
-          <span>R$ 418</span>
+          <span>Total:</span>
+          <span>{{ totalPrice | currency:'BRL' }}</span>
         </footer>
       </div>
       <button class="pagamento">Finalizar Compra</button>

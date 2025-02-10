@@ -12,13 +12,28 @@ export class OrdersService {
 
   addToCart(product: any) {
     const currentItems = this.cartItems.getValue();
-    this.cartItems.next([...currentItems, product]);
-    console.log('Produto adicionado ao carrinho:', product)
+    const cartItems = {
+      ...product,
+      cartItemId: this.generateUniqueId() 
+    };
+    this.cartItems.next([...currentItems, cartItems]);
   }
 
-  removeFromCart(product: any) {
+  removeFromCart(cartItemId: string) {
     const currentItems = this.cartItems.getValue();
-    const updatedItems = currentItems.filter(item => item.id !== product.id);
+    const updatedItems = currentItems.filter(item => item.cartItemId !== cartItemId); 
     this.cartItems.next(updatedItems);
+  }
+
+  getTotalPrice(): number {
+    const currentItems = this.cartItems.getValue();
+    return currentItems.reduce((total, item) => {
+      const price = parseFloat(item.price.replace('R$', '').replace(',', '.'));
+      return total + price;
+    }, 0);
+  }
+
+  private generateUniqueId():string{
+    return Math.random().toString(36).substring(2, 9);
   }
 }

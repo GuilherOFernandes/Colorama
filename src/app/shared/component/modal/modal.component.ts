@@ -1,6 +1,8 @@
 import { Component, TemplateRef } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { OrdersService } from '../../../features/orders/orders.service';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'intra-modal',
@@ -32,7 +34,19 @@ export class ModalComponent {
     if (!this.product) return;
 
     this.ordersService.addToCart(this.product); // Adiciona ao carrinho via serviço
-    alert(`${this.product.name} foi adicionado ao carrinho!`);
+    Swal.fire({
+      title: `${this.product.name} foi adicionado ao carrinho!`,
+      icon: 'success',
+      showClass: {
+        popup: 'animate__animated animate__fadeInUp animate__faster',
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutDown animate__faster',
+      },
+      confirmButtonColor: '#3085d6',
+      confirmButtonText: 'OK'
+    });
+  
     this.bsModalRef.hide();
   }
 }

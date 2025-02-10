@@ -29,18 +29,72 @@
 
     section {
       flex: 1;
-      
     }
     aside {
-      min-width: 250px;
+      min-width: 300px;
+      min-height: 200px;
+      margin-left: 30px;
+
+      .box {
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        background: #eee;
+        color: #222;
+
+        header {
+          padding: 15px 20px;
+          font-size: 18px;
+          border-bottom: 1px solid #ccc;
+        }
+        .info {
+          padding: 20px;
+          font-size: 16px;
+
+          > div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: #555;
+
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+        footer {
+          padding: 15px 20px;
+          background: #ddd;
+          font-size: 18px;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      .pagamento {
+        border: 0;
+        padding: 15px 0;
+        color: white;
+        background: #007bff;
+        display: block;
+        width: 100%;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 16px;
+
+        &:hover {
+          background: #3e4095;
+        }
+      }
     }
   }
 }
+
 button {
   cursor: pointer;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -94,36 +148,6 @@ table {
   }
 }
 
-.qty {
-  background: #eee;
-  display: inline-flex;
-  justify-content: space-around;
-  align-items: center;
-  overflow: hidden;
-  min-width: 60px;
-  padding: 0 0;
-  border-radius: 20px;
-  height: 30px;
-
-  span {
-    margin: 0 10px;
-  }
-
-  button {
-    display: flex;
-    align-items: center;
-    background: transparent;
-    border: 0;
-    padding: 0 10px;
-    font-size: 20px;
-    height: 100%;
-
-    &:hover {
-      background: #ddd;
-    }
-  }
-}
-
 .remove {
   background-color: #eee;
   border: 0;
@@ -138,60 +162,5 @@ table {
 
   &:hover {
     background: #ddd;
-  }
-}
-
-aside {
-  margin-left: 30px;
-  .box {
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-
-    background: #eee;
-    color: #222;
-
-    header {
-      padding: 15px 20px;
-      font-size: 18px;
-      border-bottom: 1px solid #ccc;
-    }
-    .info {
-      padding: 20px;
-      font-size: 16px;
-
-      > div {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-        color: #555;
-
-        &:last-child {
-          margin: 0;
-        }
-      }
-    }
-    footer {
-      padding: 15px 20px;
-      background: #ddd;
-      font-size: 18px;
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-
-  > .pagamento {
-    border: 0;
-    padding: 15px 0;
-    color: white;
-    background:  #007bff;
-    display: block;
-    width: 100%;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 16px;
-
-    &:hover {
-      background: #3e4095;
-    }
   }
 }

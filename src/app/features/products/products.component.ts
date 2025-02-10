@@ -26,7 +26,7 @@ export class ProductsComponent implements OnInit {
       label: 'Material de Pintura',
     },
     {
-      label: 'Equipamento de Proteção',
+      label: 'Proteção',
     },
   ];
 

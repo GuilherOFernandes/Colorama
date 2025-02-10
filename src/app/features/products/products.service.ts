@@ -34,7 +34,7 @@ export class ProductsService {
     {
       id: 4,
       name: 'Luvas de Segurança',
-      category: 'Equipamento de Proteção',
+      category: 'Proteção',
       image: 'assets/images/Luva-Nitrílica-Volk-Sem-Forro-Verde-Volk-CA-16314-300x300.jpg.webp',
       description: 'Elas têm múltiplas funções, já que evitam que o pintor suje as mãos com tinta e tenha contato direto com substâncias químicas. Além disso, elas garantem, ainda, maior firmeza às mãos, evitando que o pincel ou rolo de tinta deslize das mãos.',
       price:"R$11.90",
@@ -42,7 +42,7 @@ export class ProductsService {
     {
       id:5,
       name: 'Óculos',
-      category: 'Equipamento de Proteção',
+      category: 'Proteção',
       image: 'assets/images/Oculos-de-Seguranca-Ampla-Visao-Spider-Valeplast-CA-40957-300x300.jpg.webp',
       description: 'Impedem que pigmentos e substâncias químicas entrem em contato com a área dos olhos, causando dano temporário ou permanente. Além disso, eles também protegem de respingos, poeira, entre outros elementos.',
       price:"R$12.10",
