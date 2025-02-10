@@ -1,4 +1,4 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ProductsService } from './products.service';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ModalComponent } from 'src/app/shared/component/modal/modal.component';
@@ -51,7 +51,7 @@ export class ProductsComponent implements OnInit {
       initialState: {
         title: product.name,
         iconTemplate: 'bi bi-box',
-        product, // Passa o produto completo
+        product, 
       },
       class: 'modal-lg',
     });

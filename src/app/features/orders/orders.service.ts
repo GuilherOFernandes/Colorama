@@ -1,28 +1,24 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root', 
+  providedIn: 'root'
 })
 export class OrdersService {
-  cartProducts: any[] = []; 
+  private cartItems = new BehaviorSubject<any[]>([]);
+  currentCartItems = this.cartItems.asObservable();
 
-  constructor(private ordersService: OrdersService) {}
-
- 
-  getCart() {
-    return this.cartProducts;
-  }
-
+  constructor() {}
 
   addToCart(product: any) {
-    this.cartProducts.push(product);
-  }
-
-  ngOnInit(): void {
-    this.cartProducts = this.ordersService.getCart(); // Obtém os produtos do serviço
+    const currentItems = this.cartItems.getValue();
+    this.cartItems.next([...currentItems, product]);
+    console.log('Produto adicionado ao carrinho:', product)
   }
 
   removeFromCart(product: any) {
-    this.ordersService.removeFromCart(product);
+    const currentItems = this.cartItems.getValue();
+    const updatedItems = currentItems.filter(item => item.id !== product.id);
+    this.cartItems.next(updatedItems);
   }
 }

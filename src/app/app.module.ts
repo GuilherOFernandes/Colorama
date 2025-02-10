@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { RouterModule} from '@angular/router';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { BsModalService, ModalModule } from 'ngx-bootstrap/modal';
@@ -13,6 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductsComponent } from './features/products/products.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ModalComponent} from './shared/component/modal/modal.component'
+import { OrdersComponent } from './features/orders/orders.component';
 import { OrdersService } from './features/orders/orders.service';
 
 @NgModule({
@@ -21,13 +23,15 @@ import { OrdersService } from './features/orders/orders.service';
     HeaderComponent,
     FooterComponent,
     ProductsComponent,
-    ModalComponent
+    ModalComponent,
+    OrdersComponent,
   ],
   imports: [
     AppRoutingModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
+    CommonModule,
     HomeModule,
     ModalModule.forRoot(),
     RouterModule,

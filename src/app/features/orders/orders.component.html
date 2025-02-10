@@ -9,7 +9,7 @@
           <tr>
             <th>Produto</th>
             <th>Categoria</th>
-            <th></th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -24,7 +24,7 @@
             </td>
             <td>{{ product.category }}</td>
             <td>
-              <button class="remove">
+              <button class="remove" (click)="removeFromCart(product)">
                 <i class="fas fa-xmark"></i>
               </button>
             </td>
@@ -32,5 +32,19 @@
         </tbody>
       </table>
     </section>
+    <aside>
+      <div class="box">
+        <header>Resumo da compra</header>
+        <div class="info">
+          <div><span>Sub-total</span><span>R$ 418</span></div>
+          <div><span>Frete</span><span>Gratuito</span></div>
+        </div>
+        <footer>
+          <span>Total</span>
+          <span>R$ 418</span>
+        </footer>
+      </div>
+      <button class="pagamento">Finalizar Compra</button>
+    </aside>
   </div>
 </div>
