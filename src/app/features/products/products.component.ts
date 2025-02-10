@@ -56,4 +56,5 @@ export class ProductsComponent implements OnInit {
       class: 'modal-lg',
     });
   }
+  selectedProduct: any = null;
 }

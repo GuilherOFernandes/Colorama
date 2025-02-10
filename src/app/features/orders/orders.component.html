@@ -1,2 +1,36 @@
-<p>Oi</p>
-<p>funcionando</p>
+<section class="background-titulo">
+  <h1 class="titulo-carrinhos">Seu Carrinho</h1>
+</section>
+<div class="main">
+  <div class="content">
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Categoria</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of cartProducts">
+            <td>
+              <div class="product">
+                <img [src]="product.image" [alt]="product.name">
+                <div class="info">
+                  <div class="name">{{ product.name }}</div>
+                </div>
+              </div>
+            </td>
+            <td>{{ product.category }}</td>
+            <td>
+              <button class="remove">
+                <i class="fas fa-xmark"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</div>

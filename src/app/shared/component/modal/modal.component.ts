@@ -1,6 +1,6 @@
-import { CommonModule } from '@angular/common';
 import { Component, TemplateRef } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
+import { OrdersService } from '../../../features/orders/orders.service';
 
 @Component({
   selector: 'intra-modal',
@@ -13,15 +13,26 @@ export class ModalComponent {
   list: string[] = [];
   formTemplate!: TemplateRef<any>;
   iconTemplate: string = '';
-  product: any;
+  product: any = null; 
 
-  addToCart(): void {
-    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    cart.push(this.product);
-    localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${this.product.name} foi adicionado ao carrinho!`);
-    this.bsModalRef.hide(); // Fechar o modal após adicionar ao carrinho
+  constructor(
+    public bsModalRef: BsModalRef,
+    private ordersService: OrdersService
+  ) {}
+
+  openModal(product: any): void {
+    if (!product) {
+      console.error('Produto não encontrado');
+      return;
+    }
+    this.product = product; // Define o produto antes de abrir o modal
   }
 
-  constructor(public bsModalRef: BsModalRef) {}
+  addToCart(): void {
+    if (!this.product) return;
+
+    this.ordersService.addToCart(this.product); // Adiciona ao carrinho via serviço
+    alert(`${this.product.name} foi adicionado ao carrinho!`);
+    this.bsModalRef.hide();
+  }
 }

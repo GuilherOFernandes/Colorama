@@ -13,6 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductsComponent } from './features/products/products.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ModalComponent} from './shared/component/modal/modal.component'
+import { OrdersService } from './features/orders/orders.service';
 
 @NgModule({
   declarations: [
@@ -23,17 +24,17 @@ import {ModalComponent} from './shared/component/modal/modal.component'
     ModalComponent
   ],
   imports: [
-    ModalModule.forRoot(),
-    NgbTooltipModule,
-    BrowserModule,
     AppRoutingModule,
-    RouterModule,
     AppRoutingModule,
-    HomeModule,
-    NgbModule,
     BrowserAnimationsModule,
+    BrowserModule,
+    HomeModule,
+    ModalModule.forRoot(),
+    RouterModule,
+    NgbModule,
+    NgbTooltipModule,
   ],
-  providers: [BsModalService],
+  providers: [BsModalService,OrdersService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
