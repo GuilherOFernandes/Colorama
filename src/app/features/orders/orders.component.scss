@@ -164,3 +164,103 @@ table {
     background: #ddd;
   }
 }
+@media (max-width: 1024px) {
+  thead {
+    tr {
+      th {
+        padding-right: 20px; 
+      }
+      th:nth-child(1) { width: 20%; } 
+      th:nth-child(2) { width: 20%; } 
+      th:nth-child(3) { width: 20%; } 
+      th:nth-child(4) { width: 20%; } 
+    }
+  }
+  
+  tbody {
+    tr {
+      td {
+        padding:0 20px; 
+      }
+      td:nth-child(1) { 
+        min-width: 150px;
+      }
+      
+      td:nth-child(2) { 
+        min-width: 120px;
+      }
+      
+    }
+  }
+  
+  .titulo-carrinhos {
+    padding-left: 50px;
+    font-size: 30px;
+  }
+
+  .main {
+    margin: 40px 10px;
+    padding: 0 15px 15px;
+
+    .content {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      .product{
+        margin-right: 10px;
+
+        .name{
+          padding-top: 10px;
+          font-size: 16px;
+        }
+      }
+    }
+
+    aside {
+      margin-left: 0; 
+      width: 100%; 
+      min-width: unset;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .titulo-carrinhos {
+    font-size: 24px; 
+    text-align: center;
+    padding-left: 0;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto; 
+    white-space: nowrap; 
+  }
+
+  .product img {
+    width: 100px;
+    max-height: 100px;
+  }
+
+  .remove {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-carrinhos {
+    font-size: 20px;
+  }
+
+  .main {
+    padding: 0 10px;
+  }
+
+  .pagamento {
+    font-size: 14px; 
+    padding: 10px 0;
+  }
+}
