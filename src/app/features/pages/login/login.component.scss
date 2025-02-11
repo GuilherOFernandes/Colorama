@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html, body {
+    background: linear-gradient(to right, #7a5cd9, #4f8ff7);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;     
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    position: absolute;
+    top: 40px;    /* Define distância do topo */
+    left: 120px;   /* Define distância da lateral esquerda */
+}
+
+.logo-container img {
+    width: 500px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.balde-container {
+    position: absolute;
+    top: 10px;    /* Define distância do topo */
+    left: 120px;   /* Define distância da lateral esquerda */
+    z-index: 1;    /* Garante que fique abaixo do logotinta-container */
+}
+
+.balde-container img {
+    width: 700px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-top: 100px; /* Ajuste o valor conforme necessário para mover a imagem para baixo */
+}
+
+.background{
+    background: linear-gradient(to right, #7a5cd9, #4f8ff7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;  
+    position: relative;
+    margin: 0;    
+}
+
+.container {
+    max-width: 600px;
+    width: 100%; /* Garante que o formulário ocupe 100% do espaço disponível, mas sem ultrapassar o max-width */
+    padding: 30px;
+    background: hwb(0 100% 0% / 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Alinha o conteúdo do formulário */
+    position: relative;
+    left: 280px;  /* Move para a direita */
+    top: -60px;  /* Move para cima */
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+}
+
+.input-container input {
+    width: 100%;
+    height: 100%;
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    padding: 15px 45px 15px 20px;
+    position: relative;
+}
+
+.input-container input::placeholder {
+    color: #888;
+}
+
+.input-container img {
+    position: absolute;
+    left: 500px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+}
+
+.submit-button {
+    width: 100%;
+    height: 50px;
+    background-color: #5100b5;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 24px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #6e16da;
+}
+
+.link-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.link-container a {
+    color: #5100b5;
+    text-decoration: none; 
+    font-weight: bold;
+    transition: color 0.3s ease; 
+}
+
+.link-container a:hover {
+    color: #6e16da; 
+    text-decoration: underline; 
+}

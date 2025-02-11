@@ -16,6 +16,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ModalComponent} from './shared/component/modal/modal.component'
 import { OrdersComponent } from './features/orders/orders.component';
 import { OrdersService } from './features/orders/orders.service';
+import { LoginComponent } from './features/pages/login/login.component';
+import { CadastroComponent } from './features/pages/cadastro/cadastro.component';
+import { PagamentoComponent } from './features/pages/components/pagamento/pagamento.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +30,9 @@ import { OrdersService } from './features/orders/orders.service';
     ProductsComponent,
     ModalComponent,
     OrdersComponent,
+    LoginComponent,
+    CadastroComponent,
+    PagamentoComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -36,6 +44,11 @@ import { OrdersService } from './features/orders/orders.service';
     RouterModule,
     NgbModule,
     NgbTooltipModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule
+    
   ],
   providers: [BsModalService,OrdersService],
   bootstrap: [AppComponent],

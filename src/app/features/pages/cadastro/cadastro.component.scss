@@ -1,0 +1,160 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+h2 {    
+    text-align: center;
+    color: #333333;
+}
+
+
+.C-container img {
+    width: 650px;
+    height: auto;
+}
+.background{
+    background: linear-gradient(to right, #7a5cd9, #4f8ff7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+  
+   
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    background: hwb(0 100% 0% / 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0px;
+  
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+}
+
+.input-container input {
+    width: 100%;
+    height: 40px;
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 10px;
+    color: #333;
+    padding: 15px 45px 15px 20px;
+    position: relative;
+}
+
+.input-container img {
+    position: absolute;
+    right: 8px;
+    top: 40%;
+    transform: translateY(-50%);
+    max-width: 20px;
+}
+
+.address-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 20px 0;
+    
+}
+
+.submit-button {
+    height: 50px;
+    background-color: #5100b5;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #6e16da;
+}
+
+.prev-button,.next-button {
+    background-color: #5bc0de;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+
+.prev-button:hover,.next-button:hover {
+    background-color: #20b6e3;
+}
+
+
+
+.button-container {
+    display: flex;
+    margin-top: 45px; 
+    justify-content: center; 
+
+}
+
+.prev-button, .next-button {
+    width: 100%; 
+    max-width: 300px; 
+}
+
+
+.submit-button {
+    width: 100%; 
+    margin-top: 20px;
+}
+
+
+.link-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.link-container a {
+    color: #5100b5;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
