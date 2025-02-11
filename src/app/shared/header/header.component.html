@@ -1,22 +1,39 @@
 <header>
   <div class="container-header">
-   <div class="header-top">
-     <div class="logo">
-       <img src="/assets/images/Group90.png" alt="Logo"/>
-     </div> 
-     <nav class="nav-actions">
-     <ul>  
-       <li><a routerLink="/">Home</a></li>
-       <li><a routerLink="/about">Sobre a Empresa</a></li>
-       <li><a routerLink="/products">Produtos</a></li>
-       <li><a routerLink="/orders">Carrinho</a></li>
-     </ul>  
-    </nav>
-     <div class="account-actions">
-       <a class="sign-up" routerLink="/signup">Cadastre-se</a>
-       <a class="login-btn" routerLink="/login">Entrar</a>
-     </div>
-   </div>
- 
+    <div class="header-top">
+      <div class="logo">
+        <img src="/assets/images/Group90.png" alt="Logo" />
+      </div>
+
+      <!-- Ícone do menu hamburguer -->
+      <div class="menu-icon" (click)="toggleMenu()">☰</div>
+
+      <nav class="nav-actions">
+        <ul>
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/about">Sobre a Empresa</a></li>
+          <li><a routerLink="/products">Produtos</a></li>
+          <li><a routerLink="/orders">Carrinho</a></li>
+        </ul>
+      </nav>
+
+      <div class="account-actions">
+        <a class="sign-up" routerLink="/signup">Cadastre-se</a>
+        <a class="login-btn" routerLink="/login">Entrar</a>
+      </div>
+    </div>
   </div>
- </header>
+
+  <!-- Sidebar Mobile -->
+  <div class="sidebar" [class.open]="menuOpen">
+    <button class="close-btn" (click)="toggleMenu()">✖</button>
+    <ul>
+      <li><a routerLink="/" (click)="toggleMenu()">Home</a></li>
+      <li><a routerLink="/about" (click)="toggleMenu()">Sobre a Empresa</a></li>
+      <li><a routerLink="/products" (click)="toggleMenu()">Produtos</a></li>
+      <li><a routerLink="/orders" (click)="toggleMenu()">Carrinho</a></li>
+      <li><a routerLink="/signup" (click)="toggleMenu()">Cadastre-se</a></li>
+      <li><a routerLink="/login" (click)="toggleMenu()">Entrar</a></li>
+    </ul>
+  </div>
+</header>

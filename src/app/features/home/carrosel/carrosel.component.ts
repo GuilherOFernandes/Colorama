@@ -22,16 +22,16 @@ export class CarroselComponent {
   }
 
   nextImage() {
-    this.currentImageIndex =
-      (this.currentImageIndex + 1) % this.images.length;
+    this.currentImageIndex = (this.currentImageIndex - 1 + this.images.length) % this.images.length;
+   
   }
 
-  prevImage() {
-    this.currentImageIndex =
-      (this.currentImageIndex - 1 + this.images.length) % this.images.length;
+ 
+  onClick() {
+    this.nextImage();
   }
 
-  // Eventos de toque
+  
   onTouchStart(event: TouchEvent) {
     this.touchStartX = event.touches[0].clientX;
   }
@@ -44,7 +44,7 @@ export class CarroselComponent {
     this.handleSwipe();
   }
 
-  // Eventos de mouse
+
   onMouseDown(event: MouseEvent) {
     this.isDragging = true;
     this.touchStartX = event.clientX;
@@ -65,8 +65,6 @@ export class CarroselComponent {
   private handleSwipe() {
     if (this.touchStartX - this.touchEndX > 50) {  
       this.nextImage();
-    } else if (this.touchEndX - this.touchStartX > 50) {
-      this.prevImage();
     }
     this.touchStartX = 0;
     this.touchEndX = 0;

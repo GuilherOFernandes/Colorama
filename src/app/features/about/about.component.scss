@@ -1,73 +1,137 @@
-.background-titulo{
+.background-titulo {
   background-color: #ecdf02;
   padding: 20px 0;
   width: 100%;
   margin: 0 auto;
- 
 }
 
-.titulo-about{
+.titulo-about {
   color: #3e4095;
-  display: block; 
+  display: block;
   text-align: start;
   font-size: 40px;
   font-weight: 700;
   padding-left: 250px;
   padding-top: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    padding-left: 20px;
+    text-align: center;
+  }
 }
 
-.background-about{
- height: 50vh;
-  background: url('/assets/images/banner-home.jpg') no-repeat;
-  object-fit: contain;
+.background-about {
+  height: 50vh;
+  background: url('/assets/images/banner-home.jpg') no-repeat center center;
+  background-size: cover;
+
+  @media (max-width:1280px){
+    text-align: start;
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
+    height: 40vh;
+  }
+
+  @media (max-width:456px){
+    height: 50vh;
+  }
 }
-.grid-banner{
+
+.grid-banner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;  
+
+  @media (max-width: 1280px) {
+    grid-template-columns: 1fr; 
+    text-align: center;
+  }
+
+  @media (max-width:456px){
+    margin-bottom: 20px;
+  }
 }
 
-.texto{
+.texto {
   grid-column: 2 / 3;
   padding: 50px 100px;
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+
+  @media (max-width: 1280px) {
+    text-align: center;
+    grid-column: 1 / 2;
+    padding: 20px;  
+  }
 }
 
-.font-16{
+.font-16 {
+  text-align: start;
   margin-bottom: 0px;
   font-size: 28px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
-.titulo{
+.titulo {
   margin-top: 0px;
   color: #3e4095;
-  display: block; 
+  display: block;
   text-align: start;
   font-size: 40px;
   font-weight: 700;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    text-align: center;
+  }
 }
 
-.descricao{
+.descricao {
   font-size: 20px;
   text-align: justify;
   line-height: 2rem;
   padding-top: 20px;
+
+  @media (max-width: 1280px) {
+    font-size: 18px;
+    line-height: 1.8rem;
+    padding: 10px;
+  }
 }
 
-.center{
- width: 100%;
- box-sizing: border-box;
- padding: 0 10px;
- max-width: 1170px;
- margin: 0 auto;
+.center {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
-.biografia{
+.biografia {
   display: block;
   padding: 20px 50px;
   text-align: justify;
- justify-content: center;
- line-height: 2rem;
+  justify-content: center;
+  line-height: 2rem;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
 }
 
-.titulo-biografia{
-  margin:10px 0px;
+.titulo-biografia {
+  margin: 10px 0px;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+    text-align: center;
+  }
 }

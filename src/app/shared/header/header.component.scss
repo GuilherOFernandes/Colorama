@@ -8,12 +8,11 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; 
+    width: 100%;
     background-color: #3e4095;
-    justify-content: center;
-    align-items: center;
     z-index: 100;
-    
+  }
+
   .header-top {
     display: flex;
     justify-content: space-evenly;
@@ -22,17 +21,17 @@ header {
 
     .logo img {
       height: 50px;
-      margin-left: 200px;
-     }
+      margin-left: 50px;
     }
-  } 
+  }
+
   .nav-actions {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 14px;
 
-    
-    ul {   
+    ul {
       display: flex;
       justify-content: start;
       padding: 0;
@@ -41,47 +40,109 @@ header {
       li {
         a {
           text-decoration: none;
-          color: white;
-          font-weight: bold;
           color: #007bff;
+          font-weight: bold;
           margin: 0px 20px;
+
           &:hover {
             text-decoration: underline;
           }
         }
       }
     }
-  }  
+  }
 
-   .account-actions {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-bottom: 18px;
-      padding-right: 100px;
-      gap: 4rem;
-      
-      .login-btn{
-        padding: 16px 32px;
-        background: #007bff;
-        color: #ffffff;
-        border-radius: 8px;
+  .account-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 0;
+    padding-right: 100px;
+    gap: 3rem;
+
+    .login-btn {
+      padding: 16px 32px;
+      background: #007bff;
+      color: #ffffff;
+      border-radius: 8px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: underline;
       }
+    }
+  }
 
-      a {
-        text-decoration: none;
-        color: #007bff;
-        font-weight: bold;
-        text-align: start;
-        &:hover {
-          text-decoration: underline;
+  .menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: #2c2f7b;
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 200;
+
+    &.open {
+      right: 0;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      align-self: flex-end;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 15px 0;
+
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 18px;
+          font-weight: bold;
+
+          &:hover {
+            color: #4ba3ff;
+          }
         }
       }
-     }
-   }
-  
+    }
+  }
 
+  @media (max-width: 1170px) {
+    .nav-actions,
+    .account-actions {
+      display: none;
+    }
 
- 
- 
-
+    .menu-icon {
+      display: block;
+      .sidebar {
+        width: 100px;
+      }
+    }
+  }
+}

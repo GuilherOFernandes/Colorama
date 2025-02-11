@@ -5,11 +5,6 @@
   <div class="produtos-grid">
     <div class="categorias-flex">
       <h1>Categorias</h1>
-      <!-- <a class="link-categoria" onclick="">Ferragem</a>
-      <a class="link-categoria" onclick="">Acrilica</a>
-      <a class="link-categoria" onclick="">Solventes</a>
-      <a class="link-categoria" onclick="">Materiais de pintura</a>
-      <a class="link-categoria" onclick="">Equipamentos de Proteção</a> -->
       <a *ngFor="let category of linksCategory" class="link-categoria" (click)="filterProducts(category.label)">
         {{category.label}}
       </a>
