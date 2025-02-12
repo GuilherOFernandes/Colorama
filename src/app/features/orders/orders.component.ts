@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { OrdersService } from './orders.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-orders',
@@ -25,7 +26,17 @@ export class OrdersComponent implements OnInit {
     this.totalPrice = this.ordersService.getTotalPrice();
   }
 
-  finalizarCompra(){
-    this.router.navigate(['features/pages/components/pagamento/'])
+  finalizarCompra() {
+    if (this.totalPrice <= 0) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Carrinho vazio!',
+        text: 'Adicione itens antes de finalizar a compra.',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'OK'
+      });
+      return;
+    }
+    this.router.navigate(['/pagamento']);
   }
 }

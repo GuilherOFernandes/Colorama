@@ -19,7 +19,14 @@
 
       <div class="account-actions">
         <a class="sign-up" routerLink="/cadastro">Cadastre-se</a>
-        <a class="login-btn" routerLink="/login">Entrar</a>
+
+        <!-- Se não estiver logado, exibe "Entrar" -->
+        <a *ngIf="!isLoggedIn" class="login-btn" routerLink="/login">Entrar</a>
+
+        <!-- Se estiver logado, exibe o ícone de perfil -->
+        <div *ngIf="isLoggedIn" class="profile-icon" (click)="logout()">
+          <i class="fa-solid fa-user-circle" style="font-size: 24px; cursor: pointer;"></i>
+        </div>
       </div>
     </div>
   </div>
@@ -32,7 +39,7 @@
       <li><a routerLink="/about" (click)="toggleMenu()">Sobre a Empresa</a></li>
       <li><a routerLink="/products" (click)="toggleMenu()">Produtos</a></li>
       <li><a routerLink="/orders" (click)="toggleMenu()">Carrinho</a></li>
-      <li><a routerLink="/signup" (click)="toggleMenu()">Cadastre-se</a></li>
+      <li><a routerLink="/cadastro" (click)="toggleMenu()">Cadastre-se</a></li>
       <li><a routerLink="/login" (click)="toggleMenu()">Entrar</a></li>
     </ul>
   </div>

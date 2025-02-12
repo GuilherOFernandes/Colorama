@@ -1,137 +1,63 @@
 <div class="background">
   <div class="C-container">
-    <img
-      src="assets/images/coloramaaLogoC.png"
-      alt="Logo da Empresa"
-      class="C"
-    />
+    <img src="assets/images/coloramaaLogoC.png" alt="Logo da Empresa" class="C" />
   </div>
   <div class="container">
     <h1>Cadastro de Clientes</h1>
 
-    <form
-      [formGroup]="dadosPessoaisForm"
-      [ngClass]="{ step: true, active: etapa === 1 }"
-    >
+    <form [formGroup]="dadosPessoaisForm" [ngClass]="{ step: true, active: etapa === 1 }">
       <h2>Dados Pessoais</h2>
 
       <div class="input-container">
-        <input
-          type="text"
-          formControlName="nome"
-          placeholder="Digite seu nome"
-          required
-        />
+        <input type="text" formControlName="nome" placeholder="Digite seu nome" required />
         <img src="https://img.icons8.com/ios-filled/50/user.png" alt="Nome" />
       </div>
 
       <div class="input-container">
-        <input
-          type="text"
-          formControlName="cpf"
-          placeholder="Digite seu CPF"
-          required
-        />
-        <img
-          src="https://img.icons8.com/ios/50/identification-documents.png"
-          alt="CPF"
-        />
+        <input type="text" formControlName="cpf" placeholder="Digite seu CPF" required />
+        <img src="https://img.icons8.com/ios/50/identification-documents.png" alt="CPF" />
       </div>
 
       <div class="input-container">
-        <input
-          type="email"
-          formControlName="email"
-          placeholder="Digite seu email"
-          required
-        />
+        <input type="email" formControlName="email" placeholder="Digite seu email" required />
         <img src="https://img.icons8.com/ios/50/new-post.png" alt="Email" />
       </div>
 
       <div class="input-container">
-        <input
-          type="password"
-          formControlName="senha"
-          placeholder="Digite sua senha"
-          required
-        />
+        <input type="password" formControlName="senha" placeholder="Digite sua senha" required />
         <img src="https://img.icons8.com/ios/50/lock-2.png" alt="Senha" />
       </div>
 
       <div class="input-container">
-        <input
-          type="tel"
-          formControlName="telefone"
-          placeholder="Digite seu telefone"
-          required
-        />
+        <input type="tel" formControlName="telefone" placeholder="Digite seu telefone" required />
         <img src="https://img.icons8.com/ios/50/phone.png" alt="Telefone" />
       </div>
 
       <div class="input-container">
         <input type="date" formControlName="dataDeNascimento" required />
       </div>
-      <div class="button-container">
-        <button class="next-button" (click)="proximaEtapa()">Próximo</button>
-      </div>
     </form>
 
-    <form
-      [formGroup]="enderecoForm"
-      [ngClass]="{ step: true, active: etapa === 2 }"
-    >
+    <form [formGroup]="enderecoForm" [ngClass]="{ step: true, active: etapa === 2 }">
       <h2>Endereço</h2>
 
       <div class="input-container">
-        <input
-          type="text"
-          formControlName="cep"
-          placeholder="Digite seu CEP"
-          (blur)="buscarCEP()"
-          required
-        />
+        <input type="text" formControlName="cep" placeholder="Digite seu CEP" (blur)="buscarCEP()" required />
         <img src="https://img.icons8.com/ios/50/marker.png" alt="CEP" />
       </div>
 
       <div class="address-fields">
         <input type="text" formControlName="rua" placeholder="Rua" readonly />
-        <input
-          type="text"
-          formControlName="bairro"
-          placeholder="Bairro"
-          readonly
-        />
-        <input
-          type="text"
-          formControlName="cidade"
-          placeholder="Cidade"
-          readonly
-        />
-        <input
-          type="text"
-          formControlName="estado"
-          placeholder="Estado"
-          readonly
-        />
+        <input type="text" formControlName="bairro" placeholder="Bairro" readonly />
+        <input type="text" formControlName="cidade" placeholder="Cidade" readonly />
+        <input type="text" formControlName="estado" placeholder="Estado" readonly />
       </div>
 
       <div class="input-container">
         <div class="input-flex">
-          <input
-            type="text"
-            formControlName="numero"
-            placeholder="Número"
-            required
-          />
-          <input
-            type="text"
-            formControlName="complemento"
-            placeholder="Complemento (ex.: Bloco, Apt)"
-          />
+          <input type="text" formControlName="numero" placeholder="Número" required />
+          <input type="text" formControlName="complemento" placeholder="Complemento (ex.: Bloco, Apt)" />
         </div>
-      </div>
-      <div class="button-container">
-        <button class="prev-button" (click)="voltarEtapa()">Voltar</button>
       </div>
     </form>
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cadastro',
@@ -133,7 +134,12 @@ export class CadastroComponent implements OnInit {
           }
         );
     } else {
-      alert('Por favor, preencha todos os campos corretamente!');
+      Swal.fire({
+        icon: "error",
+        title: "Erro",
+        text: "Preencha todos os campos corretamente",
+        footer: '<a href="#">Why do I have this issue?</a>'
+      });
     }
   }
 }

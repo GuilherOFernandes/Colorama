@@ -142,3 +142,46 @@ h1 {
     color: #6e16da; 
     text-decoration: underline; 
 }
+
+@media (max-width: 1347px) {
+    .background {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .balde-container {
+        position: static;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .balde-container img {
+        width: 300px;
+        margin-top: 0;
+    }
+
+    .container {
+        left: 0;
+        top: 0;
+        max-width: 90%;
+    }
+
+    .input-container img {
+        left: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .input-container img {
+        left: 85%;
+    }
+}
